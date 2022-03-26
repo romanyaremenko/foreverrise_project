@@ -503,7 +503,7 @@ $(document).ready(function () {
         if (
             ((Trigger = setTimeout(function () {
                 !Se && a > 991 && (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0 ? d() : p());
-                console.log('scroll true')
+                // console.log('scroll true')
             }, 1000)),
             a < 991)
         ) {
@@ -545,7 +545,7 @@ $(document).ready(function () {
                 $(".header_navi").removeClass("active"),
                 $("body").css("overflow-y", "auto"),
                 setTimeout(function () {
-                    console.log('test 4');
+                    // console.log('test 4');
                     // console.log($(".trigger_page-" + a));
                     var scrolToEl = $(".trigger_page-" + a).offset().top;
                     $("html, body").animate({

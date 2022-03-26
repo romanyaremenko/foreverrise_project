@@ -19,13 +19,13 @@ var ebBody = $('#modalContainer');
 var ebSpan = $('.m-close_js');
 
 ebBtn.on('click', function(e){
-    console.log('show');
+    // console.log('show');
     e.preventDefault();
     ebModal.addClass('active');
     ebBody.addClass('active');
 });
 ebSpan.on('click', function(e){
-    console.log('hide');
+    // console.log('hide');
     e.preventDefault();
     ebModal.removeClass('active');
     ebBody.removeClass('active');
@@ -69,7 +69,7 @@ $(() => {
         if (win.width() < 990) {
             slider.not(".slick-initialized").slick(init);
             slider.slick("refresh");
-            console.log('slick refresh');
+            // console.log('slick refresh');
         } else if (slider.hasClass("slick-initialized")) {
             setTimeout(function () {
                 slider.slick("unslick");
