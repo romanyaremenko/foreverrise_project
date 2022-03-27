@@ -545,7 +545,7 @@ $(document).ready(function () {
                 $(".header_navi").removeClass("active"),
                 $("body").css("overflow-y", "auto"),
                 setTimeout(function () {
-                    // console.log('test 4');
+                    // console.log('presale 4');
                     // console.log($(".trigger_page-" + a));
                     var scrolToEl = $(".trigger_page-" + a).offset().top;
                     $("html, body").animate({

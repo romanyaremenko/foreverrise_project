@@ -97,12 +97,12 @@ $(() => {
 // });
 
 // ebBtn.onclick = function(e) {
-//     console.log('test modal');
+//     console.log('presale modal');
 //     e.preventDefault();
 //     ebModal.classList.add('active');
 // }
 // ebSpan.onclick = function() {
-//     console.log('test modal1');
+//     console.log('presale modal1');
 //     ebBody.classList.add('close');
 //     setTimeout(() => {
 //         ebModal.classList.remove('active');
@@ -110,7 +110,7 @@ $(() => {
 //     }, 250);
 // }
 // window.onclick = function(event) {
-//     console.log('test modal2');
+//     console.log('presale modal2');
 //     if (event.target == ebModal && !ebModal.classList.contains("active")) {
 //         ebBody.classList.add('close');
 //         setTimeout(() => {
@@ -387,7 +387,7 @@ function calculatePeriod () {
         });
     } ());
 
-    // var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+    // var isiPhone = /iphone/i.presale(navigator.userAgent.toLowerCase());
     // if (isiPhone)
     // {
     //     $('.scene').addClass('iphoneStyle');
