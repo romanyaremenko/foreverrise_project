@@ -3676,8 +3676,8 @@ video#loopVideo::-webkit-media-controls-start-playback-button{
     }
     .coming_soon .scene {
         height: auto;
-         padding-top: 10px;
-         padding-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .page-team .container {
@@ -4210,7 +4210,7 @@ video#loopVideo::-webkit-media-controls-start-playback-button{
     }
     .page-coming_soon .container {
         width: 100%;
-         /*min-height: inherit;*/
+        /*min-height: inherit;*/
     }
     .page-coming_soon .grup-btn {
         max-width: 490px;
@@ -4434,40 +4434,40 @@ video#loopVideo::-webkit-media-controls-start-playback-button{
     .header .logo-wrapp {
         height: auto;
     }
-    }
+}
 
-    @media (orientation: landscape) and (max-height: 450px){
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .header .logo-wrapp {
-            width: 160px;
-        }
-        .header .logo-wrapp {
-            height: auto;
-        }
-        .page-coming_soon .title {
-            font-size: 23px;
-        }
-        .page-coming_soon .count-num {
-            font-size: 30px;
-        }
-        .container-countdown_item .countdown_name {
-            font-size: 14px;
-        }
-        .container-countdown_item li {
-            width: 76px;
-        }
-        .page-coming_soon .grup-btn {
-            max-width: 284px;
-        }
-        .page-coming_soon .btn {
-            width: 128px;
-            /* min-width: 120px; */
+@media (orientation: landscape) and (max-height: 450px){
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header .logo-wrapp {
+        width: 160px;
+    }
+    .header .logo-wrapp {
+        height: auto;
+    }
+    .page-coming_soon .title {
+        font-size: 23px;
+    }
+    .page-coming_soon .count-num {
+        font-size: 30px;
+    }
+    .container-countdown_item .countdown_name {
+        font-size: 14px;
+    }
+    .container-countdown_item li {
+        width: 76px;
+    }
+    .page-coming_soon .grup-btn {
+        max-width: 284px;
+    }
+    .page-coming_soon .btn {
+        width: 128px;
+        /* min-width: 120px; */
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 15px;
