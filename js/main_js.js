@@ -385,7 +385,7 @@ function calculatePeriod () {
             }, 800);
 
 
-            document.querySelector("#myVideo").currentTime = 0
+            // document.querySelector("#myVideo").currentTime = 0
             document.querySelector("#myVideo").play()
 
         });
@@ -401,7 +401,7 @@ function calculatePeriod () {
 
 // window.addEventListener('load', function() {
 //     let videoTest = document.querySelector('#myVideo');
-//
+//     document.querySelector("#myVideo").play()
 //     videoTest.addEventListener('timeupdate',function () {
 //         console.log(videoTest.currentTime)
 //         if(videoTest.currentTime === 5) {
