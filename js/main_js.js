@@ -384,10 +384,10 @@ function calculatePeriod () {
                 posterVid.css('display', 'none');
             }, 800);
 
-
+            document.querySelector("#myVideo").pause()
             document.querySelector("#myVideo").currentTime = 0
             document.querySelector("#myVideo").muted = false;
-            // document.querySelector("#myVideo").play()
+            document.querySelector("#myVideo").play()
 
         });
     } ());
