@@ -385,8 +385,9 @@ function calculatePeriod () {
             }, 800);
 
 
-            // document.querySelector("#myVideo").currentTime = 0
-            document.querySelector("#myVideo").play()
+            document.querySelector("#myVideo").currentTime = 0
+            document.querySelector("#myVideo").muted = false;
+            // document.querySelector("#myVideo").play()
 
         });
     } ());
@@ -399,17 +400,18 @@ function calculatePeriod () {
 });
 
 
-// window.addEventListener('load', function() {
-//     let videoTest = document.querySelector('#myVideo');
-//     document.querySelector("#myVideo").play()
-//     videoTest.addEventListener('timeupdate',function () {
-//         console.log(videoTest.currentTime)
-//         if(videoTest.currentTime === 5) {
-//             // document.querySelector("#myVideo").pause()
-//             console.log("test123")
-//         }
-//     })
-//
-// })
+window.addEventListener('load', function() {
+    let videoTest = document.querySelector('#myVideo');
+    document.querySelector("#myVideo").play()
+    document.querySelector("#myVideo").muted = true;
+    videoTest.addEventListener('timeupdate',function () {
+        console.log(videoTest.currentTime)
+        if(videoTest.currentTime === 5) {
+            // document.querySelector("#myVideo").pause()
+            console.log("test123")
+        }
+    })
+
+})
 
 
