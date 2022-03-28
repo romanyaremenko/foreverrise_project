@@ -360,8 +360,8 @@ function calculatePeriod () {
         zoomBtn.on('click', function (e) {
             e.preventDefault();
             $(this).addClass('hide-btn');
-            var srcVid = $(this).data('src');
-            var contVid = $(this).next('.y-container');
+            // var srcVid = $(this).data('src');
+            // var contVid = $(this).next('.y-container');
             var posterVid = $(this).next('.y-container').children('.video-poster');
             var parentContVid = $(this).closest('.page');
             // console.log(posterVid)
@@ -381,6 +381,7 @@ function calculatePeriod () {
 
             setTimeout(function(){
                 posterVid.css('zIndex', '0');
+                posterVid.css('display', 'none');
             }, 800);
 
 
