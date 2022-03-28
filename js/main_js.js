@@ -384,8 +384,8 @@ function calculatePeriod () {
                 posterVid.css('display', 'none');
             }, 800);
 
-            document.querySelector("#myVideo").pause()
-            document.querySelector("#myVideo").currentTime = 0
+            // document.querySelector("#myVideo").pause()
+            // document.querySelector("#myVideo").currentTime = 0
             document.querySelector("#myVideo").muted = false;
             document.querySelector("#myVideo").play()
 
@@ -400,18 +400,29 @@ function calculatePeriod () {
 });
 
 
-window.addEventListener('load', function() {
-    let videoTest = document.querySelector('#myVideo');
-    document.querySelector("#myVideo").play()
-    document.querySelector("#myVideo").muted = true;
-    videoTest.addEventListener('timeupdate',function () {
-        console.log(videoTest.currentTime)
-        if(videoTest.currentTime === 5) {
-            // document.querySelector("#myVideo").pause()
-            console.log("test123")
-        }
-    })
-
-})
+// let videoTest = document.querySelector('#myVideo');
+//
+//
+//
+// window.addEventListener('load', function() {
+//
+//     videoTest.addEventListener('canplaythrough',function () {
+//         document.querySelector("#myVideo").muted = true;
+//         document.querySelector("#myVideo").autoplay = true;
+//         // document.querySelector("#myVideo").autoplay = true;
+//         document.querySelector("#myVideo").setAttribute("autoplay", "true");
+//         console.log("canplaythrough")
+//     })
+//
+//     // videoTest.addEventListener('timeupdate',function () {
+//     //     console.log("timeupdate")
+//     //     console.log(videoTest.currentTime)
+//     //     if(videoTest.currentTime > 5) {
+//     //         document.querySelector("#myVideo").pause()
+//     //         console.log("test123")
+//     //     }
+//     // })
+//     console.log("load")
+// })
 
 
