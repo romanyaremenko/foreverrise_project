@@ -367,22 +367,25 @@ function calculatePeriod () {
             // console.log(posterVid)
 
 
-            function loadIframe(srcVid) {
-                $('<video>', {
-                    src: srcVid,
-                    id:  'myVideo',
-                    controls: 'true',
-                    autoplay: 'true'
-                }).appendTo(contVid);
-                return true;
-            }
-            loadIframe(srcVid);
+            // function loadIframe(srcVid) {
+            //     $('<video>', {
+            //         src: srcVid,
+            //         id:  'myVideo',
+            //         controls: 'true',
+            //         autoplay: 'true'
+            //     }).appendTo(contVid);
+            //     return true;
+            // }
+            // loadIframe(srcVid);
             parentContVid.addClass('play-video');
 
             setTimeout(function(){
                 posterVid.css('zIndex', '0');
             }, 800);
 
+
+            document.querySelector("#myVideo").currentTime = 0
+            document.querySelector("#myVideo").play()
 
         });
     } ());
@@ -393,3 +396,19 @@ function calculatePeriod () {
     //     $('.scene').addClass('iphoneStyle');
     // }
 });
+
+
+// window.addEventListener('load', function() {
+//     let videoTest = document.querySelector('#myVideo');
+//
+//     videoTest.addEventListener('timeupdate',function () {
+//         console.log(videoTest.currentTime)
+//         if(videoTest.currentTime === 5) {
+//             // document.querySelector("#myVideo").pause()
+//             console.log("test123")
+//         }
+//     })
+//
+// })
+
+

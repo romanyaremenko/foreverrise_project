@@ -1,6 +1,8 @@
 
 
-
+.phone video::-webkit-media-controls {
+    display: none!important;
+}
 
 @media (min-width: 320px) {
     body.page_load:before {
