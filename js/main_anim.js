@@ -579,7 +579,23 @@ function animaJs () {
 $(document).ready(function () {
     function preload() {
         // animaJs()
-        $('.preload').hide();
+        // $('.preload').fadeTo("fast", 1000);
+        box = document.querySelector('.preload');
+        if (box.classList.contains('hidden')) {
+            box.classList.remove('hidden');
+            setTimeout(function () {
+                box.classList.remove('visuallyhidden');
+            }, 20);
+        } else {
+            box.classList.add('visuallyhidden');
+            box.addEventListener('transitionend', function(e) {
+                box.classList.add('hidden');
+            }, {
+                capture: false,
+                once: true,
+                passive: false
+            });
+        }
     }
     setTimeout(preload, 3000);
 

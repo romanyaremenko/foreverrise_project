@@ -19,7 +19,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 1s ;
 }
+
+.hidden {
+    display: none;
+}
+
+.visuallyhidden {
+    opacity: 0;
+}
+
 .nb-spinner {
     width: 75px;
     height: 75px;
