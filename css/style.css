@@ -14,7 +14,8 @@
     bottom: 0;
     z-index: 99999;
     /*background: url(../materials/photo/bg_1920.jpg);*/
-    background: url(../materials/photo/bg_1920.jpg) center center/cover no-repeat;
+    /*background: url(../materials/photo/bg_1920.jpg) center center/cover no-repeat;*/
+    /*background: linear-gradient(0deg, rgba(255,35,167,1) 12%, rgba(0,0,0,1) 92%);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,6 +31,7 @@
     -webkit-animation: 1s spin linear infinite;
     animation: 1s spin linear infinite;
 }
+
 
 @keyframes spin {
     from {
@@ -49,9 +51,16 @@
     font-family: monospace;
     font-size: 30px;
     margin-top: 30px;
+    color: #ff23a7;
+    position: relative;
+}
+.loading__clip {
     clip-path: inset(0 3ch 0 0);
     animation: l 1s steps(4) infinite;
     color: #ff23a7;
+    position: absolute;
+    bottom: 0;
+    right: -53px;
 }
 
 @keyframes l {
