@@ -1,12 +1,10 @@
-$(window).on('load', function () {
-    $("#preload").fadeOut(1750);
-});
+// $(window).on('load', function () {
+//     // $("#preload").fadeOut(1750);
+//
+//
+// });
 
-
-function loadLoopVideo() {
-    (loopVideo[0].src = "video/UI_Full_Loop_460x996_x2.mp4"), loopVideo[0].load(), loopVideo[0].play();
-}
-$(document).ready(function () {
+function animaJs () {
     var winW = $(window).width();
     function e() {
         T.reversed(),
@@ -153,37 +151,37 @@ $(document).ready(function () {
     }
     function c() {
 
+        TweenMax.staggerFrom(
+            $e,
+            1,
+            {
+                delay: 2.2,
+                cycle: {
+                    opacity: [0],
+                    x: [-80],
+                    ease: function (e) {
+                        return Back.easeOut.config(0.7 * e);
+                    },
+                },
+            },
+            0.06
+        ),
             TweenMax.staggerFrom(
-                $e,
-                1,
+                we,
+                0.7,
                 {
-                    delay: 2.2,
+                    delay: 3.2,
                     cycle: {
                         opacity: [0],
-                        x: [-80],
+                        y: [10],
                         ease: function (e) {
-                            return Back.easeOut.config(0.7 * e);
+                            return Back.easeOut.config(0.8 * e);
                         },
                     },
                 },
-                0.06
+                0.08
             ),
-                TweenMax.staggerFrom(
-                    we,
-                    0.7,
-                    {
-                        delay: 3.2,
-                        cycle: {
-                            opacity: [0],
-                            y: [10],
-                            ease: function (e) {
-                                return Back.easeOut.config(0.8 * e);
-                            },
-                        },
-                    },
-                    0.08
-                ),
-                TweenMax.from(xe, 1.5, {delay: 3.3, opacity: 0, y: 40, ease: "expo.out"});
+            TweenMax.from(xe, 1.5, {delay: 3.3, opacity: 0, y: 40, ease: "expo.out"});
 
     }
     function r() {
@@ -305,7 +303,7 @@ $(document).ready(function () {
         10 === Pe &&
         (u.text("Contract address"),
             setTimeout(function () {
-                    c();
+                c();
             }, 100)),
         11 === Pe &&
         (u.text("Disclaimer"),
@@ -550,7 +548,7 @@ $(document).ready(function () {
                     var scrolToEl = $(".trigger_page-" + a).offset().top;
                     $("html, body").animate({
                         scrollTop:
-                        scrolToEl + 'px'
+                            scrolToEl + 'px'
                     }, "slow");
                 }, 200)),
                 12 === Pe ? $(".scroll-btn").css("visibility", "hidden") : $(".scroll-btn").css("visibility", "visible"),
@@ -575,7 +573,31 @@ $(document).ready(function () {
         $(document).on("click", ".btn_to-top_js", function (e) {
             e.preventDefault(), $("html, body").animate({ scrollTop: 0 }, "slow");
         });
-});
+}
+
+
+$(document).ready(function () {
+    function preload() {
+        // animaJs()
+        $('.preload').hide();
+    }
+    setTimeout(preload, 3000);
+
+    function preloadAnima() {
+        animaJs()
+    }
+    setTimeout(preloadAnima, 500);
+})
+
+function loadLoopVideo() {
+    (loopVideo[0].src = "video/UI_Full_Loop_460x996_x2.mp4"), loopVideo[0].load(), loopVideo[0].play();
+}
+
+// $(document).ready(function (){
+//
+// });
+$(document).ready();
+
 var loopVideo = $("#loopVideo");
 $(window).load(function () {
     loadLoopVideo();
