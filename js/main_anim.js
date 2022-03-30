@@ -576,34 +576,55 @@ function animaJs () {
 }
 
 
-$(document).ready(function () {
-    function preload() {
-        // animaJs()
-        // $('.preload').fadeTo("fast", 1000);
-        box = document.querySelector('.preload');
-        if (box.classList.contains('hidden')) {
-            box.classList.remove('hidden');
-            setTimeout(function () {
-                box.classList.remove('visuallyhidden');
-            }, 20);
-        } else {
-            box.classList.add('visuallyhidden');
-            box.addEventListener('transitionend', function(e) {
-                box.classList.add('hidden');
-            }, {
-                capture: false,
-                once: true,
-                passive: false
-            });
-        }
-    }
-    setTimeout(preload, 3000);
 
-    function preloadAnima() {
-        animaJs()
-    }
-    setTimeout(preloadAnima, 500);
-})
+
+if(document.fonts) {
+    const notoSansRegular = new FontFace('Foreverise_1-Regular', 'url(fonts/Foreverise_1-Regular.ttf)');
+    document.fonts.add(notoSansRegular);
+    console.info('Current status', notoSansRegular.status);
+    notoSansRegular.load();
+    document.fonts.ready.then((fontFaceSet) => {
+        console.log(fontFaceSet.size, 'FontFaces loaded.');
+        $(document).ready(function () {
+
+
+            function preload() {
+                // animaJs()
+                // $('.preload').fadeTo("fast", 1000);
+                box = document.querySelector('.preload');
+                if (box.classList.contains('hidden')) {
+                    box.classList.remove('hidden');
+                    setTimeout(function () {
+                        box.classList.remove('visuallyhidden');
+                    }, 20);
+                } else {
+                    box.classList.add('visuallyhidden');
+                    box.addEventListener('transitionend', function(e) {
+                        box.classList.add('hidden');
+                    }, {
+                        capture: false,
+                        once: true,
+                        passive: false
+                    });
+                }
+            }
+            setTimeout(preload, 3000);
+
+            function preloadAnima() {
+                animaJs()
+            }
+            setTimeout(preloadAnima, 500);
+        })
+    });
+
+} else {
+    console.error('Sorry, unsupported browser');
+}
+
+
+
+
+
 
 function loadLoopVideo() {
     (loopVideo[0].src = "video/UI_Full_Loop_460x996_x2.mp4"), loopVideo[0].load(), loopVideo[0].play();
