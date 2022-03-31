@@ -91,7 +91,7 @@
         left: 0;
         top: 0;
         width: 100vw;
-        height: calc(100vh + 200px);
+        height: 100vh;
         z-index: -10;
         background: url(../materials/photo/bg_1920.jpg) no-repeat center center;
         -webkit-background-size: cover;
@@ -3816,7 +3816,7 @@ video#loopVideo::-webkit-media-controls-start-playback-button{
         left: 0;
         top: 0;
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh + 125px);
         z-index: -10;
         background: url(../materials/photo/bg3_768.jpg) no-repeat center center;
         -webkit-background-size: cover;
